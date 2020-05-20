@@ -1,0 +1,11 @@
+prefix P:<https://www.covin.com//provinsi#>.
+prefix K:<https://www.covin.com//kota#>.
+
+SELECT ?provinsi ?kota
+WHERE
+{
+    ?region T:namaProvinsi ?provinsi ;
+    OPTIONAL{?city P:kota/K:namaKota ?kota .}
+
+
+}
