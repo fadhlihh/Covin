@@ -1,0 +1,9 @@
+PREFIX p: <http://covin.com/ns/provinsi#>
+PREFIX d: <http://covin.com/ns/data#>
+
+SELECT ?provinsi ?positif
+WHERE
+{ 
+    ?s  d:namaProvinsi ?provinsi ;
+        d:kasusPositif ?positif;
+}

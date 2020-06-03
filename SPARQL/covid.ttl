@@ -1,0 +1,244 @@
+@prefix p: <http://covin.com/ns/provinsi#>.
+@prefix d: <http://covin.com/ns/data#>.
+
+p:P01        d:namaProvinsi	        "Aceh" ;
+             d:kasusPositif       	20 ;
+             d:kasusSembuh          17 ;
+             d:kasusMeninggal       1 ;
+             d:latitude             5.548290;
+             d:longitude            95.323753.
+
+p:P02        d:namaProvinsi	        "Sumatera Utara" ;
+             d:kasusPositif       	417 ;
+             d:kasusSembuh          148 ;
+             d:kasusMeninggal       41;
+             d:latitude             3.597031;
+             d:longitude            98.678513.
+
+p:P03        d:namaProvinsi	        "Sumatera Barat" ;
+             d:kasusPositif       	567 ;
+             d:kasusSembuh          267 ;
+             d:kasusMeninggal       25;
+             d:latitude             -0.626439;
+             d:longitude            100.117958.
+
+p:P04        d:namaProvinsi	        "Riau" ;
+             d:kasusPositif       	7485 ;
+             d:kasusSembuh          2272 ;
+             d:kasusMeninggal       518;
+             d:latitude             0.506566;
+             d:longitude            101.437790.
+
+p:P05        d:namaProvinsi	        "Jambi" ;
+             d:kasusPositif       	97 ;
+             d:kasusSembuh          15 ;
+             d:kasusMeninggal       0;
+             d:latitude             -1.609972;
+             d:longitude            103.607254.
+
+p:P06        d:namaProvinsi	        "Sumatera Selatan" ;
+             d:kasusPositif       	995;
+             d:kasusSembuh          215;
+             d:kasusMeninggal       34;
+             d:latitude             -2.990934;
+             d:longitude            104.756554.
+
+p:P07        d:namaProvinsi	        "Bengkulu" ;
+             d:kasusPositif       	91;
+             d:kasusSembuh          22;
+             d:kasusMeninggal       2;
+             d:latitude             -3.7928;
+             d:longitude            102.2608.
+
+p:P08        d:namaProvinsi	        "Kepulauan Bangka Belitung" ;
+             d:kasusPositif       	46;
+             d:kasusSembuh          28 ;
+             d:kasusMeninggal       1;
+             d:latitude             -2.133333;
+             d:longitude            106.116669.
+
+p:P09        d:namaProvinsi	        "Lampung" ;
+             d:kasusPositif       	135;
+             d:kasusSembuh          74;
+             d:kasusMeninggal       10;
+             d:latitude             -5.450000;
+             d:longitude            105.266670.
+
+p:P10        d:namaProvinsi	        "Kepulauan Riau" ;
+             d:kasusPositif       	197;
+             d:kasusSembuh          102;
+             d:kasusMeninggal       15;
+             d:latitude             1.045626;
+             d:longitude            104.030457.
+
+p:P11        d:namaProvinsi	        "DKI Jakarta" ;
+             d:kasusPositif       	7485 ;
+             d:kasusSembuh          2272 ;
+             d:kasusMeninggal       518;
+             d:latitude             -6.200000;
+             d:longitude            106.816666.
+
+p:P12        d:namaProvinsi	        "Jawa Barat" ;
+             d:kasusPositif       	2294;
+             d:kasusSembuh          619;
+             d:kasusMeninggal       144;
+             d:latitude             -6.914864;
+             d:longitude            107.608238.
+
+p:P13        d:namaProvinsi	        "Jawa Tengah" ;
+             d:kasusPositif       	1417;
+             d:kasusSembuh          370;
+             d:kasusMeninggal       70;
+             d:latitude             -6.966667;
+             d:longitude            110.416664.
+
+p:P14        d:namaProvinsi	        "Daerah Istimewa Yogyakarta" ;
+             d:kasusPositif       	237;
+             d:kasusSembuh          166;
+             d:kasusMeninggal       8;
+             d:latitude             -7.797068;
+             d:longitude            110.370529.
+
+p:P15        d:namaProvinsi	        "Jawa Timur" ;
+             d:kasusPositif       	4922;
+             d:kasusSembuh          654;
+             d:kasusMeninggal       412;
+             d:latitude             -7.250445;
+             d:longitude            112.768845.
+
+p:P16        d:namaProvinsi	        "Banten" ;
+             d:kasusPositif       	867;
+             d:kasusSembuh          252;
+             d:kasusMeninggal       69;
+             d:latitude             -6.178306;
+             d:longitude            106.631889.
+
+p:P17        d:namaProvinsi	        "Bali" ;
+             d:kasusPositif       	482;
+             d:kasusSembuh          334;
+             d:kasusMeninggal       5;
+             d:latitude             -8.650000;
+             d:longitude            115.216667.
+
+p:P18        d:namaProvinsi	        "Nusa Tenggara Barat" ;
+             d:kasusPositif       	652;
+             d:kasusSembuh          292;
+             d:kasusMeninggal       10;
+             d:latitude             -8.646535;
+             d:longitude            116.530434.
+
+p:P19        d:namaProvinsi	        "Nusa Tenggara Timur" ;
+             d:kasusPositif       	97;
+             d:kasusSembuh          14;
+             d:kasusMeninggal       1;
+             d:latitude             -10.178757;
+             d:longitude            123.597603.
+
+p:P20        d:namaProvinsi	        "Kalimantan Barat" ;
+             d:kasusPositif       	196;
+             d:kasusSembuh          55;
+             d:kasusMeninggal       4;
+             d:latitude             -0.000000;
+             d:longitude            109.333336.
+
+p:P21        d:namaProvinsi	        "Kalimantan Tengah" ;
+             d:kasusPositif       	419;
+             d:kasusSembuh          164;
+             d:kasusMeninggal       19;
+             d:latitude             -2.539465;
+             d:longitude            112.958687.
+
+p:P22        d:namaProvinsi	        "Kalimantan Selatan" ;
+             d:kasusPositif       	948;
+             d:kasusSembuh          99;
+             d:kasusMeninggal       86;
+             d:latitude             -3.316694;
+             d:longitude            114.590111.
+
+p:P23        d:namaProvinsi	        "Kalimantan Timur" ;
+             d:kasusPositif       	297;
+             d:kasusSembuh          174;
+             d:kasusMeninggal       3;
+             d:latitude             -0.502106;
+             d:longitude            117.153709.
+
+p:P24        d:namaProvinsi	        "Kalimantan Utara" ;
+             d:kasusPositif       	165;
+             d:kasusSembuh          80;
+             d:kasusMeninggal       2;
+             d:latitude             2.7678;
+             d:longitude            117.4321.
+
+p:P25        d:namaProvinsi	        "Sulawesi Utara" ;
+             d:kasusPositif       	339;
+             d:kasusSembuh          52;
+             d:kasusMeninggal       37;
+             d:latitude             1.474830;
+             d:longitude            124.842079.
+
+p:P26        d:namaProvinsi	        "Sulawesi Tengah" ;
+             d:kasusPositif       	128;
+             d:kasusSembuh          61;
+             d:kasusMeninggal       4;
+             d:latitude             0.8679;
+             d:longitude            119.9047.
+
+p:P27        d:namaProvinsi	        "Sulawesi Selatan" ;
+             d:kasusPositif       	1586;
+             d:kasusSembuh          625;
+             d:kasusMeninggal       75;
+             d:latitude             -5.135399;
+             d:longitude            119.423790.
+             
+
+p:P28        d:namaProvinsi	        "Sulawesi Tenggara" ;
+             d:kasusPositif       	244;
+             d:kasusSembuh          122;
+             d:kasusMeninggal       4;
+             d:latitude             -3.9985;
+             d:longitude            122.5130.
+
+p:P29        d:namaProvinsi	        "Gorontalo" ;
+             d:kasusPositif       	94;
+             d:kasusSembuh          26;
+             d:kasusMeninggal       3;
+             d:latitude             0.556174;
+             d:longitude            123.058548.
+
+p:P30        d:namaProvinsi	        "Sulawesi Barat" ;
+             d:kasusPositif       	92;
+             d:kasusSembuh          41;
+             d:kasusMeninggal       2;
+             d:latitude             -2.4920;
+             d:longitude            119.3250.
+
+p:P31        d:namaProvinsi	        "Maluku" ;
+             d:kasusPositif       	223;
+             d:kasusSembuh          36;
+             d:kasusMeninggal       8;
+             d:latitude             -3.654703;
+             d:longitude            128.190643.
+
+p:P32        d:namaProvinsi	        "Maluku Utara" ;
+             d:kasusPositif       	160;
+             d:kasusSembuh          29;
+             d:kasusMeninggal       14;
+             d:latitude             0.7958;
+             d:longitude            127.3614.
+
+p:P33        d:namaProvinsi	        "Papua" ;
+             d:kasusPositif       	725;
+             d:kasusSembuh          68;
+             d:kasusMeninggal       6;
+             d:latitude             -4.2699;
+             d:longitude            138.0804.
+
+p:P34        d:namaProvinsi	        "Papua Barat" ;
+             d:kasusPositif       	168;
+             d:kasusSembuh          55;
+             d:kasusMeninggal       4;
+             d:latitude             -0.861453;
+             d:longitude            134.062042.
+
+
+
