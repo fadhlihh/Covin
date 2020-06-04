@@ -9,46 +9,29 @@
 </head>
 <body>
     <div class="content">
-        <h1>Provinsi</h1>
-        <table class="table table-bordered table-hover">
-            <thead class="thead-light">
-                <tr>
-                    <th width="40%">Kota</th>
-                    <th width="20%">Positif</th>
-                    <th width="20%">Sembuh</th>
-                    <th width="20%">Meninggal</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
+        <h1>Nama Provinsi</h1>
+        <br>
+        <div class="card">
+            <div class="card-header" style="background-color: #e6d59e;">Positif</div>
+            <div class="card-body" style="background-color: #dbd1af;">
+                1000
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" style="background-color: #ace38d;">Sembuh</div>
+            <div class="card-body" style="background-color: #c2e3af;">
+                1000
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" style="background-color: #ed9595;">Meninggal</div>
+            <div class="card-body" style="background-color: #ebb5b5;">
+                1000
+            </div>
+        </div>
     </div>
     <div class="recommend">
-        <h6>Recommendation</h6>
+        <h6>Provinsi lainnya</h6>
         <br>
         <a href="#">Kota 1</a>
         <a href="#">Kota 2</a>
