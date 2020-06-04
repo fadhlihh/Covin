@@ -26,12 +26,15 @@
             PREFIX p: <http://covin.com/ns/provinsi#>
             PREFIX d: <http://covin.com/ns/data#>
             
-            SELECT ?Provinsi ?Longitude ?Latitude
+            SELECT ?Provinsi ?Longitude ?Latitude ?Positif ?Sembuh ?Meninggal
             WHERE
             { 
                 ?s  d:namaProvinsi ?Provinsi ;
                     d:longitude ?Longitude;
                     d:latitude ?Latitude;
+                    d:kasusPositif ?Positif;
+                    d:kasusSembuh ?Sembuh;
+                    d:kasusMeninggal ?Meninggal;
             }
         " );
         if( !isset($data) )
@@ -73,8 +76,8 @@
         <!-- CREATE PAGE IN MAP -->
         <div id = "mapid" style = "width:1200px; height:580px; margin: 0 auto;"></div>
         <script>
-            // Assign JSON object from PHP to Javascript
-            var json = <?php echo json_encode($data, JSON_PRETTY_PRINT); ?>;
+            // Assign JSON object from PHP to Javascript globally
+            localStorage.setItem("json", JSON.stringify(<?php echo json_encode($data, JSON_PRETTY_PRINT); ?>));
 
             // Create map
             var map = L.map('mapid').setView([-1.609972, 118.607254], 5);
@@ -89,15 +92,12 @@
 
             // Create marker for every province
             for(var i = 0 ; i < 34 ; i++){
-                var provinsi = json[i].Provinsi;
-                var longitude = json[i].Longitude;
-                var latitude = json[i].Latitude;
+                var provinsi = JSON.parse(localStorage.getItem("json"))[i].Provinsi;
+                var longitude = JSON.parse(localStorage.getItem("json"))[i].Longitude;
+                var latitude = JSON.parse(localStorage.getItem("json"))[i].Latitude;
                 var marker = L.marker([latitude, longitude]);
-
-                var popup = L.popup();
-                marker.bindPopup(provinsi + '<br><a href="http://www.google.com/search?q=' + provinsi + '">Visit Province</a>').openPopup();
+                marker.bindPopup(provinsi + '<br><a href="http://127.0.0.1/covin/info.php/?index=' + i + '">Details</a>' + '<br><a href="http://www.google.com/search?q=' + provinsi + '">Search at Google</a>').openPopup();
                 marker.addTo(map);
-                
             }
         </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
