@@ -14,9 +14,12 @@
     crossorigin=""></script>
 </head>
 <body>
-    <div class="header">
+    <!-- <div class="header">
 
-    </div>
+    </div> -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a href="http://127.0.0.1/covin/">COVIN</a>
+    </nav>
     <?php
         require_once( "sparqllib.php" );
         
@@ -43,9 +46,6 @@
         }
     ?>
     <div class="content">
-        <div class="choice">
-            <a href="/covin" class="active">Indonesia</a>
-        </div>
         <!--
             CREATE PAGE IN TABLE FORM
             <table class="table table-bordered table-hover">
@@ -74,7 +74,7 @@
         </table>-->
         
         <!-- CREATE PAGE IN MAP -->
-        <div id = "mapid" style = "width:1200px; height:580px; margin: 0 auto;"></div>
+        <div id = "mapid" style = "width:100%; height:580px;"></div>
         <script>
             // Assign JSON object from PHP to Javascript globally
             localStorage.setItem("json", JSON.stringify(<?php echo json_encode($data, JSON_PRETTY_PRINT); ?>));
@@ -96,10 +96,12 @@
                 var longitude = JSON.parse(localStorage.getItem("json"))[i].Longitude;
                 var latitude = JSON.parse(localStorage.getItem("json"))[i].Latitude;
                 var marker = L.marker([latitude, longitude]);
-                marker.bindPopup(provinsi + '<br><a href="http://127.0.0.1/covin/info.php/?index=' + i + '">Details</a>' + '<br><a href="http://www.google.com/search?q=' + provinsi + '">Search at Google</a>').openPopup();
+                marker.bindPopup(provinsi + '<br><a href="http://127.0.0.1/covin/info.php?index=' + i + '">Details</a>' + '<br><a href="http://www.google.com/search?q=' + provinsi + '">Search at Google</a>').openPopup();
                 marker.addTo(map);
             }
         </script>
+    </div>
+    <footer>&copy; COVIN Covid Information</footer>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

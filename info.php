@@ -8,25 +8,28 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a href="http://127.0.0.1/covin/">COVIN</a>
+    </nav>
     <div class="content">
-        <h1 id="nama-provinsi";>Nama Provinsi</h1>
+        <h1 id="nama-provinsi">Nama Provinsi</h1>
         <br>
         <div class="card">
             <div class="card-header" style="background-color: #e6d59e;">Positif</div>
-            <div class="card-body" style="background-color: #dbd1af;" id="card-positif";>
-                1000
+            <div class="card-body" style="background-color: #dbd1af;">
+                <div id="card-positif">1000</div>
             </div>
         </div>
         <div class="card">
             <div class="card-header" style="background-color: #ace38d;">Sembuh</div>
-            <div class="card-body" style="background-color: #c2e3af;" id="card-sembuh";>
-                1000
+            <div class="card-body" style="background-color: #c2e3af;">
+                <div id="card-sembuh">1000</div>
             </div>
         </div>
         <div class="card">
             <div class="card-header" style="background-color: #ed9595;">Meninggal</div>
-            <div class="card-body" style="background-color: #ebb5b5; " id="card-meninggal";>
-                1000
+            <div class="card-body" style="background-color: #ebb5b5; ">
+                <div id="card-meninggal">1000</div>
             </div>
         </div>
     </div>
@@ -38,6 +41,7 @@
         <a href="#" id="thirdProvince">Provinsi 3</a>
         <br>
     </div>
+    <footer>&copy; COVIN Covid Information</footer>
     <script>
         // Get index parameter from URL
         var url_string = window.location.href;
@@ -77,11 +81,11 @@
 
         // Update Best Province
         document.getElementById("firstProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[0]].Provinsi; 
-        document.getElementById("firstProvince").href='http://127.0.0.1/covin/info.php/?index='+bestProvinceIndex[0]; 
+        document.getElementById("firstProvince").href='http://127.0.0.1/covin/info.php?index='+bestProvinceIndex[0]; 
         document.getElementById("secondProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[1]].Provinsi; 
-        document.getElementById("secondProvince").href='http://127.0.0.1/covin/info.php/?index='+bestProvinceIndex[1]; 
+        document.getElementById("secondProvince").href='http://127.0.0.1/covin/info.php?index='+bestProvinceIndex[1]; 
         document.getElementById("thirdProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[2]].Provinsi; 
-        document.getElementById("thirdProvince").href='http://127.0.0.1/covin/info.php/?index='+bestProvinceIndex[2]; 
+        document.getElementById("thirdProvince").href='http://127.0.0.1/covin/info.php?index='+bestProvinceIndex[2]; 
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
