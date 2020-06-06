@@ -22,16 +22,16 @@
     </nav>
     <?php
         require_once( "sparqllib.php" );
-        
-        $data = sparql_get( 
+
+        $data = sparql_get(
             "http://localhost:3030/covin/sparql",
             "
             PREFIX p: <http://covin.com/ns/provinsi#>
             PREFIX d: <http://covin.com/ns/data#>
-            
+
             SELECT ?Provinsi ?Longitude ?Latitude ?Positif ?Sembuh ?Meninggal
             WHERE
-            { 
+            {
                 ?s  d:namaProvinsi ?Provinsi ;
                     d:longitude ?Longitude;
                     d:latitude ?Latitude;
@@ -58,7 +58,7 @@
                 }
                 print "</tr>";
                 print "</thead>";
-                
+
                 print "<tbody>";
                 foreach( $data as $row )
                 {
@@ -72,7 +72,7 @@
             print "</tbody>";
             ?>
         </table>-->
-        
+
         <!-- CREATE PAGE IN MAP -->
         <div id = "mapid" style = "width:100%; height:580px;"></div>
         <script>
@@ -101,7 +101,56 @@
             }
         </script>
     </div>
+    <div class="recommend">
+        <h6>Provinsi di sekitar anda</h6>
+        <br>
+        <a href="#" id="firstProvince">Provinsi 1</a>
+        <a href="#" id="secondProvince">Provinsi 2</a>
+        <a href="#" id="thirdProvince">Provinsi 3</a>
+        <br>
+    </div>
     <footer>&copy; COVIN Covid Information</footer>
+    <script>
+
+          // Get current province's coordinate
+          window.navigator.geolocation.getCurrentPosition(function(position) {
+            lat = position.coords.latitude;
+            lon = position.coords.longitude;
+            // Get index parameter from URL
+            var url_string = window.location.href;
+            var url = new URL(url_string);
+            var index = url.searchParams.get("index");
+            // Create best province variable
+            var bestProvinceIndex = [100,100,100];
+            var bestProvinceDistance = [100,100,100];
+            var lat;
+            var lon;
+            // Find the best province
+            for(var i = 0; i<34; i++){
+                if(i == index) continue;
+                else{
+                    var currLat = JSON.parse(localStorage.getItem("json"))[i].Latitude;
+                    var currLon = JSON.parse(localStorage.getItem("json"))[i].Longitude;
+                    var distance = Math.sqrt(Math.pow(lat-currLat,2) + Math.pow(lon-currLon,2));
+                    for(var j=0; j<bestProvinceIndex.length; j++){
+                        if(distance < bestProvinceDistance[j]){
+                            bestProvinceIndex[j] = i;
+                            bestProvinceDistance[j] = distance;
+                            break;
+                        }
+                    }
+                }
+            }
+            // Update Best Province
+            document.getElementById("firstProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[0]].Provinsi;
+            document.getElementById("firstProvince").href='http://127.0.0.1/covin/info.php?index='+bestProvinceIndex[0];
+            document.getElementById("secondProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[1]].Provinsi;
+            document.getElementById("secondProvince").href='http://127.0.0.1/covin/info.php?index='+bestProvinceIndex[1];
+            document.getElementById("thirdProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[2]].Provinsi;
+            document.getElementById("thirdProvince").href='http://127.0.0.1/covin/info.php?index='+bestProvinceIndex[2];
+        })
+      </script>
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
