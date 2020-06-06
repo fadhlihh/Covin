@@ -114,21 +114,13 @@
 
           // Get current province's coordinate
           window.navigator.geolocation.getCurrentPosition(function(position) {
-            lat = position.coords.latitude;
-            lon = position.coords.longitude;
-            // Get index parameter from URL
-            var url_string = window.location.href;
-            var url = new URL(url_string);
-            var index = url.searchParams.get("index");
+            var  lat = position.coords.latitude;
+            var  lon = position.coords.longitude;
             // Create best province variable
             var bestProvinceIndex = [100,100,100];
             var bestProvinceDistance = [100,100,100];
-            var lat;
-            var lon;
             // Find the best province
             for(var i = 0; i<34; i++){
-                if(i == index) continue;
-                else{
                     var currLat = JSON.parse(localStorage.getItem("json"))[i].Latitude;
                     var currLon = JSON.parse(localStorage.getItem("json"))[i].Longitude;
                     var distance = Math.sqrt(Math.pow(lat-currLat,2) + Math.pow(lon-currLon,2));
@@ -139,7 +131,6 @@
                             break;
                         }
                     }
-                }
             }
             // Update Best Province
             document.getElementById("firstProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[0]].Provinsi;
@@ -148,6 +139,33 @@
             document.getElementById("secondProvince").href='http://127.0.0.1/covin/info.php?index='+bestProvinceIndex[1];
             document.getElementById("thirdProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[2]].Provinsi;
             document.getElementById("thirdProvince").href='http://127.0.0.1/covin/info.php?index='+bestProvinceIndex[2];
+        },function(){
+          alert("Geolocation is not available");
+          var  lat = -6.200000;
+          var  lon = 106.816666;
+          // Create best province variable
+          var bestProvinceIndex = [100,100,100];
+          var bestProvinceDistance = [100,100,100];
+          // Find the best province
+          for(var i = 0; i<34; i++){
+                  var currLat = JSON.parse(localStorage.getItem("json"))[i].Latitude;
+                  var currLon = JSON.parse(localStorage.getItem("json"))[i].Longitude;
+                  var distance = Math.sqrt(Math.pow(lat-currLat,2) + Math.pow(lon-currLon,2));
+                  for(var j=0; j<bestProvinceIndex.length; j++){
+                      if(distance < bestProvinceDistance[j]){
+                          bestProvinceIndex[j] = i;
+                          bestProvinceDistance[j] = distance;
+                          break;
+                      }
+                  }
+          }
+          // Update Best Province
+          document.getElementById("firstProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[0]].Provinsi;
+          document.getElementById("firstProvince").href='http://127.0.0.1/covin/info.php?index='+bestProvinceIndex[0];
+          document.getElementById("secondProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[1]].Provinsi;
+          document.getElementById("secondProvince").href='http://127.0.0.1/covin/info.php?index='+bestProvinceIndex[1];
+          document.getElementById("thirdProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[2]].Provinsi;
+          document.getElementById("thirdProvince").href='http://127.0.0.1/covin/info.php?index='+bestProvinceIndex[2];
         })
       </script>
     </script>
