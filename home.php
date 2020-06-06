@@ -104,9 +104,9 @@
     <div class="recommend">
         <h6>Provinsi di sekitar anda</h6>
         <br>
-        <a href="#" id="firstProvince">Provinsi 1</a>
-        <a href="#" id="secondProvince">Provinsi 2</a>
-        <a href="#" id="thirdProvince">Provinsi 3</a>
+        <a href="http://127.0.0.1/covin/info.php?index=32" id="firstProvince">DKI Jakarta</a>
+        <a href="http://127.0.0.1/covin/info.php?index=20" id="secondProvince">Lampung</a>
+        <a href="http://127.0.0.1/covin/info.php?index=27" id="thirdProvince">Sumatera Selatan</a>
         <br>
     </div>
     <footer>&copy; COVIN Covid Information</footer>
