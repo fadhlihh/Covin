@@ -47,7 +47,7 @@
         var url_string = window.location.href;
         var url = new URL(url_string);
         var index = url.searchParams.get("index");
-        
+
         // Create best province variable
         var bestProvinceIndex = [100,100,100];
         var bestProvinceDistance = [100,100,100];
@@ -80,12 +80,12 @@
         document.getElementById("card-meninggal").innerHTML = JSON.parse(localStorage.getItem("json"))[index].Meninggal;
 
         // Update Best Province
-        document.getElementById("firstProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[0]].Provinsi; 
-        document.getElementById("firstProvince").href='http://127.0.0.1/covin/info.php?index='+bestProvinceIndex[0]; 
-        document.getElementById("secondProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[1]].Provinsi; 
-        document.getElementById("secondProvince").href='http://127.0.0.1/covin/info.php?index='+bestProvinceIndex[1]; 
-        document.getElementById("thirdProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[2]].Provinsi; 
-        document.getElementById("thirdProvince").href='http://127.0.0.1/covin/info.php?index='+bestProvinceIndex[2]; 
+        document.getElementById("firstProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[0]].Provinsi;
+        document.getElementById("firstProvince").href='http://127.0.0.1/covin/info.php?index='+bestProvinceIndex[0];
+        document.getElementById("secondProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[1]].Provinsi;
+        document.getElementById("secondProvince").href='http://127.0.0.1/covin/info.php?index='+bestProvinceIndex[1];
+        document.getElementById("thirdProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[2]].Provinsi;
+        document.getElementById("thirdProvince").href='http://127.0.0.1/covin/info.php?index='+bestProvinceIndex[2];
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
