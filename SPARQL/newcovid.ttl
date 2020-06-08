@@ -1,0 +1,153 @@
+@prefix p: <http://covin.com/ns/provinsi#>.
+@prefix atr: <http://covin.com/ns/atr/#>.
+@prefix id: <http://covin.com/ns/data#>
+
+
+id:001      atr:province             p:P01;
+            atr:kasusPositif       	20 ;
+            atr:kasusSembuh          17 ;
+            atr:kasusMeninggal       1.
+
+id:002      atr:province             p:P12;
+            atr:kasusPositif       	 2294 ;
+            atr:kasusSembuh          619 ;
+            atr:kasusMeninggal       144.
+
+# province data
+
+p:P01        atr:namaProvinsi	        "Aceh" ;
+             atr:latitude             5.548290;
+             atr:longitude            95.323753.
+
+p:P02        atr:namaProvinsi	        "Sumatera Utara" ;
+             atr:latitude             3.597031;
+             atr:longitude            98.678513.
+
+p:P03        atr:namaProvinsi	        "Sumatera Barat" ;
+             atr:latitude             -0.626439;
+             atr:longitude            100.117958.
+
+p:P04        atr:namaProvinsi	        "Riau" ;
+             atr:latitude             0.506566;
+             atr:longitude            101.437790.
+
+p:P05        atr:namaProvinsi	        "Jambi" ;
+             atr:latitude             -1.609972;
+             atr:longitude            103.607254.
+
+p:P06        atr:namaProvinsi	        "Sumatera Selatan" ;
+             atr:latitude             -2.990934;
+             atr:longitude            104.756554.
+
+p:P07        atr:namaProvinsi	        "Bengkulu" ;
+             atr:latitude             -3.7928;
+             atr:longitude            102.2608.
+
+p:P08        atr:namaProvinsi	        "Kepulauan Bangka Belitung" ;
+             atr:latitude             -2.133333;
+             atr:longitude            106.116669.
+
+p:P09        atr:namaProvinsi	        "Lampung" ;
+             atr:latitude             -5.450000;
+             atr:longitude            105.266670.
+
+p:P10        atr:namaProvinsi	        "Kepulauan Riau" ;
+             atr:latitude             1.045626;
+             atr:longitude            104.030457.
+
+p:P11        atr:namaProvinsi	        "DKI Jakarta" ;
+             atr:latitude             -6.200000;
+             atr:longitude            106.816666.
+
+p:P12        atr:namaProvinsi	        "Jawa Barat" ;
+             atr:latitude             -6.914864;
+             atr:longitude            107.608238.
+
+p:P13        atr:namaProvinsi	        "Jawa Tengah" ;
+             atr:latitude             -6.966667;
+             atr:longitude            110.416664.
+
+p:P14        atr:namaProvinsi	        "Daerah Istimewa Yogyakarta" ;
+             atr:latitude             -7.797068;
+             atr:longitude            110.370529.
+
+p:P15        atr:namaProvinsi	        "Jawa Timur" ;
+             atr:latitude             -7.250445;
+             atr:longitude            112.768845.
+
+p:P16        atr:namaProvinsi	        "Banten" ;
+             atr:latitude             -6.178306;
+             atr:longitude            106.631889.
+
+p:P17        atr:namaProvinsi	        "Bali" ;
+             atr:latitude             -8.650000;
+             atr:longitude            115.216667.
+
+p:P18        atr:namaProvinsi	        "Nusa Tenggara Barat" ;
+             atr:latitude             -8.646535;
+             atr:longitude            116.530434.
+
+p:P19        atr:namaProvinsi	        "Nusa Tenggara Timur" ;
+             atr:latitude             -10.178757;
+             atr:longitude            123.597603.
+
+p:P20        atr:namaProvinsi	        "Kalimantan Barat" ;
+             atr:latitude             -0.000000;
+             atr:longitude            109.333336.
+
+p:P21        atr:namaProvinsi	        "Kalimantan Tengah" ;
+             atr:latitude             -2.539465;
+             atr:longitude            112.958687.
+
+p:P22        atr:namaProvinsi	        "Kalimantan Selatan" ;
+             atr:latitude             -3.316694;
+             atr:longitude            114.590111.
+
+p:P23        atr:namaProvinsi	        "Kalimantan Timur" ;
+             atr:latitude             -0.502106;
+             atr:longitude            117.153709.
+
+p:P24        atr:namaProvinsi	        "Kalimantan Utara" ;
+             atr:latitude             2.7678;
+             atr:longitude            117.4321.
+
+p:P25        atr:namaProvinsi	        "Sulawesi Utara" ;
+             atr:latitude             1.474830;
+             atr:longitude            124.842079.
+
+p:P26        atr:namaProvinsi	        "Sulawesi Tengah" ;
+             atr:latitude             0.8679;
+             atr:longitude            119.9047.
+
+p:P27        atr:namaProvinsi	        "Sulawesi Selatan" ;
+             atr:latitude             -5.135399;
+             atr:longitude            119.423790.
+
+
+p:P28        atr:namaProvinsi	        "Sulawesi Tenggara" ;
+             atr:latitude             -3.9985;
+             atr:longitude            122.5130.
+
+p:P29        atr:namaProvinsi	        "Gorontalo" ;
+             atr:latitude             0.556174;
+             atr:longitude            123.058548.
+
+p:P30        atr:namaProvinsi	        "Sulawesi Barat" ;
+             atr:latitude             -2.4920;
+             atr:longitude            119.3250.
+
+p:P31        atr:namaProvinsi	        "Maluku" ;
+             atr:latitude             -3.654703;
+             atr:longitude            128.190643.
+
+p:P32        atr:namaProvinsi	        "Maluku Utara" ;
+             atr:latitude             0.7958;
+             atr:longitude            127.3614.
+
+p:P33        atr:namaProvinsi	        "Papua" ;
+             atr:latitude             -4.2699;
+             atr:longitude            138.0804.
+
+p:P34        atr:namaProvinsi	        "Papua Barat" ;
+             atr:latitude             -0.861453;
+             atr:longitude            134.062042.
