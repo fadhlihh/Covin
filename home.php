@@ -96,7 +96,7 @@
                 var longitude = JSON.parse(localStorage.getItem("json"))[i].Longitude;
                 var latitude = JSON.parse(localStorage.getItem("json"))[i].Latitude;
                 var marker = L.marker([latitude, longitude]);
-                marker.bindPopup(provinsi + '<br><a href="http://127.0.0.1/covin/info.php?index=' + i + '">Details</a>' + '<br><a href="http://www.google.com/search?q=' + provinsi + '">Search at Google</a>').openPopup();
+                marker.bindPopup(provinsi + '<br><a href="info.php?index=' + i + '">Details</a>' + '<br><a href="http://www.google.com/search?q=' + provinsi + '">Search at Google</a>').openPopup();
                 marker.addTo(map);
             }
         </script>
