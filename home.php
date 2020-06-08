@@ -161,11 +161,11 @@
           }
           // Update Best Province
           document.getElementById("firstProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[0]].Provinsi;
-          document.getElementById("firstProvince").href='covin/info.php?index='+bestProvinceIndex[0];
+          document.getElementById("firstProvince").href='info.php?index='+bestProvinceIndex[0];
           document.getElementById("secondProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[1]].Provinsi;
-          document.getElementById("secondProvince").href='covin/info.php?index='+bestProvinceIndex[1];
+          document.getElementById("secondProvince").href='info.php?index='+bestProvinceIndex[1];
           document.getElementById("thirdProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[2]].Provinsi;
-          document.getElementById("thirdProvince").href='covin/info.php?index='+bestProvinceIndex[2];
+          document.getElementById("thirdProvince").href='info.php?index='+bestProvinceIndex[2];
         })
       </script>
     </script>
