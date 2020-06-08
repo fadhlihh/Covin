@@ -18,13 +18,13 @@
 
     </div> -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a href="http://127.0.0.1/covin/">COVIN</a>
+        <a href="home.php">COVIN</a>
     </nav>
     <?php
         require_once( "sparqllib.php" );
 
         $data = sparql_get(
-            "http://localhost:3030/covin/sparql",
+            "https://qrary-fuseki-service.herokuapp.com/covin/sparql",
             "
             PREFIX p: <http://covin.com/ns/provinsi#>
             PREFIX d: <http://covin.com/ns/data#>
@@ -104,9 +104,9 @@
     <div class="recommend">
         <h6>Provinsi di sekitar anda</h6>
         <br>
-        <a href="http://127.0.0.1/covin/info.php?index=32" id="firstProvince">DKI Jakarta</a>
-        <a href="http://127.0.0.1/covin/info.php?index=20" id="secondProvince">Lampung</a>
-        <a href="http://127.0.0.1/covin/info.php?index=27" id="thirdProvince">Sumatera Selatan</a>
+        <a href="info.php?index=32" id="firstProvince">DKI Jakarta</a>
+        <a href="info.php?index=20" id="secondProvince">Lampung</a>
+        <a href="info.php?index=27" id="thirdProvince">Sumatera Selatan</a>
         <br>
     </div>
     <footer>&copy; COVIN Covid Information</footer>
@@ -134,11 +134,11 @@
             }
             // Update Best Province
             document.getElementById("firstProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[0]].Provinsi;
-            document.getElementById("firstProvince").href='http://127.0.0.1/covin/info.php?index='+bestProvinceIndex[0];
+            document.getElementById("firstProvince").href='info.php?index='+bestProvinceIndex[0];
             document.getElementById("secondProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[1]].Provinsi;
-            document.getElementById("secondProvince").href='http://127.0.0.1/covin/info.php?index='+bestProvinceIndex[1];
+            document.getElementById("secondProvince").href='info.php?index='+bestProvinceIndex[1];
             document.getElementById("thirdProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[2]].Provinsi;
-            document.getElementById("thirdProvince").href='http://127.0.0.1/covin/info.php?index='+bestProvinceIndex[2];
+            document.getElementById("thirdProvince").href='info.php?index='+bestProvinceIndex[2];
         },function(){
           alert("Geolocation is not available");
           var  lat = -6.200000;
@@ -161,11 +161,11 @@
           }
           // Update Best Province
           document.getElementById("firstProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[0]].Provinsi;
-          document.getElementById("firstProvince").href='http://127.0.0.1/covin/info.php?index='+bestProvinceIndex[0];
+          document.getElementById("firstProvince").href='covin/info.php?index='+bestProvinceIndex[0];
           document.getElementById("secondProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[1]].Provinsi;
-          document.getElementById("secondProvince").href='http://127.0.0.1/covin/info.php?index='+bestProvinceIndex[1];
+          document.getElementById("secondProvince").href='covin/info.php?index='+bestProvinceIndex[1];
           document.getElementById("thirdProvince").innerHTML= JSON.parse(localStorage.getItem("json"))[bestProvinceIndex[2]].Provinsi;
-          document.getElementById("thirdProvince").href='http://127.0.0.1/covin/info.php?index='+bestProvinceIndex[2];
+          document.getElementById("thirdProvince").href='covin/info.php?index='+bestProvinceIndex[2];
         })
       </script>
     </script>
